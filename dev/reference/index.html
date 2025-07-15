@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">ellmer</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.1.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.2.1.9001</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,12 +19,20 @@
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/prompt-design.html">Prompt design</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/programming.html">Programming with ellmer</a></li>
+    <li><a class="dropdown-item" href="../articles/prompt-design.html">Prompt design</a></li>
     <li><a class="dropdown-item" href="../articles/streaming-async.html">Streaming and async APIs</a></li>
     <li><a class="dropdown-item" href="../articles/structured-data.html">Structured data</a></li>
     <li><a class="dropdown-item" href="../articles/tool-calling.html">Tool/function calling</a></li>
   </ul></li>
-<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-news" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">News</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-news"><li><h6 class="dropdown-header" data-toc-skip>Releases</h6></li>
+    <li><a class="external-link dropdown-item" href="https://www.tidyverse.org/blog/2025/05/ellmer-0-2-0/">Version 0.2.0</a></li>
+    <li><a class="external-link dropdown-item" href="https://posit.co/blog/announcing-ellmer/">Version 0.1.0</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="../news/index.html">Changelog</a></li>
+  </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/tidyverse/ellmer/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
@@ -51,19 +59,19 @@
 
       <dl><dt>
 
-          <code><a href="Chat.html">Chat</a></code>
+          <code><a href="chat-any.html">chat()</a></code>
 
         </dt>
-        <dd>A chat</dd>
+        <dd>Chat with any provider</dd>
       </dl><dl><dt>
 
-          <code><a href="chat_anthropic.html">chat_anthropic()</a></code>
+          <code><a href="chat_anthropic.html">chat_anthropic()</a></code> <code><a href="chat_anthropic.html">models_anthropic()</a></code>
 
         </dt>
         <dd>Chat with an Anthropic Claude model</dd>
       </dl><dl><dt>
 
-          <code><a href="chat_aws_bedrock.html">chat_aws_bedrock()</a></code>
+          <code><a href="chat_aws_bedrock.html">chat_aws_bedrock()</a></code> <code><a href="chat_aws_bedrock.html">models_aws_bedrock()</a></code>
 
         </dt>
         <dd>Chat with an AWS bedrock model</dd>
@@ -82,7 +90,7 @@
       </dl><dl><dt>
 
           <code><a href="chat_cortex_analyst.html">chat_cortex_analyst()</a></code>
-
+          <span class="badge lifecycle lifecycle-deprecated">deprecated</span>
         </dt>
         <dd>Create a chatbot that speaks to the Snowflake Cortex Analyst</dd>
       </dl><dl><dt>
@@ -99,13 +107,13 @@
         <dd>Chat with a model hosted on DeepSeek</dd>
       </dl><dl><dt>
 
-          <code><a href="chat_github.html">chat_github()</a></code>
+          <code><a href="chat_github.html">chat_github()</a></code> <code><a href="chat_github.html">models_github()</a></code>
 
         </dt>
         <dd>Chat with a model hosted on the GitHub model marketplace</dd>
       </dl><dl><dt>
 
-          <code><a href="chat_google_gemini.html">chat_google_gemini()</a></code> <code><a href="chat_google_gemini.html">chat_google_vertex()</a></code>
+          <code><a href="chat_google_gemini.html">chat_google_gemini()</a></code> <code><a href="chat_google_gemini.html">chat_google_vertex()</a></code> <code><a href="chat_google_gemini.html">models_google_gemini()</a></code> <code><a href="chat_google_gemini.html">models_google_vertex()</a></code>
 
         </dt>
         <dd>Chat with a Google Gemini or Vertex AI model</dd>
@@ -129,13 +137,13 @@
         <dd>Chat with a model hosted on Mistral's La Platforme</dd>
       </dl><dl><dt>
 
-          <code><a href="chat_ollama.html">chat_ollama()</a></code>
+          <code><a href="chat_ollama.html">chat_ollama()</a></code> <code><a href="chat_ollama.html">models_ollama()</a></code>
 
         </dt>
         <dd>Chat with a local Ollama model</dd>
       </dl><dl><dt>
 
-          <code><a href="chat_openai.html">chat_openai()</a></code>
+          <code><a href="chat_openai.html">chat_openai()</a></code> <code><a href="chat_openai.html">models_openai()</a></code>
 
         </dt>
         <dd>Chat with an OpenAI model</dd>
@@ -153,16 +161,28 @@
         <dd>Chat with a model hosted on perplexity.ai</dd>
       </dl><dl><dt>
 
+          <code><a href="chat_portkey.html">chat_portkey()</a></code> <code><a href="chat_portkey.html">models_portkey()</a></code>
+
+        </dt>
+        <dd>Chat with a model hosted on PortkeyAI</dd>
+      </dl><dl><dt>
+
           <code><a href="chat_snowflake.html">chat_snowflake()</a></code>
 
         </dt>
         <dd>Chat with a model hosted on Snowflake</dd>
       </dl><dl><dt>
 
-          <code><a href="chat_vllm.html">chat_vllm()</a></code>
+          <code><a href="chat_vllm.html">chat_vllm()</a></code> <code><a href="chat_vllm.html">models_vllm()</a></code>
 
         </dt>
         <dd>Chat with a model hosted by vLLM</dd>
+      </dl><dl><dt>
+
+          <code><a href="Chat.html">Chat</a></code>
+
+        </dt>
+        <dd>The Chat object</dd>
       </dl><dl><dt>
 
           <code><a href="token_usage.html">token_usage()</a></code>
@@ -217,6 +237,29 @@
         </dt>
         <dd>Upload a file to gemini</dd>
       </dl></div><div class="section level2">
+      <h2 id="parallel-and-batch-chat">Parallel and batch chat<a class="anchor" aria-label="anchor" href="#parallel-and-batch-chat"></a></h2>
+
+
+
+
+    </div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="batch_chat.html">batch_chat()</a></code> <code><a href="batch_chat.html">batch_chat_text()</a></code> <code><a href="batch_chat.html">batch_chat_structured()</a></code> <code><a href="batch_chat.html">batch_chat_completed()</a></code>
+          <span class="badge lifecycle lifecycle-experimental">experimental</span>
+        </dt>
+        <dd>Submit multiple chats in one batch</dd>
+      </dl><dl><dt>
+
+          <code><a href="parallel_chat.html">parallel_chat()</a></code> <code><a href="parallel_chat.html">parallel_chat_text()</a></code> <code><a href="parallel_chat.html">parallel_chat_structured()</a></code>
+          <span class="badge lifecycle lifecycle-experimental">experimental</span>
+        </dt>
+        <dd>Submit multiple chats in parallel</dd>
+      </dl></div><div class="section level2">
       <h2 id="tools-and-structured-data">Tools and structured data<a class="anchor" aria-label="anchor" href="#tools-and-structured-data"></a></h2>
 
 
@@ -241,7 +284,13 @@
         <dd>Tool annotations</dd>
       </dl><dl><dt>
 
-          <code><a href="type_boolean.html">type_boolean()</a></code> <code><a href="type_boolean.html">type_integer()</a></code> <code><a href="type_boolean.html">type_number()</a></code> <code><a href="type_boolean.html">type_string()</a></code> <code><a href="type_boolean.html">type_enum()</a></code> <code><a href="type_boolean.html">type_array()</a></code> <code><a href="type_boolean.html">type_object()</a></code>
+          <code><a href="tool_reject.html">tool_reject()</a></code>
+
+        </dt>
+        <dd>Reject a tool call</dd>
+      </dl><dl><dt>
+
+          <code><a href="type_boolean.html">type_boolean()</a></code> <code><a href="type_boolean.html">type_integer()</a></code> <code><a href="type_boolean.html">type_number()</a></code> <code><a href="type_boolean.html">type_string()</a></code> <code><a href="type_boolean.html">type_enum()</a></code> <code><a href="type_boolean.html">type_array()</a></code> <code><a href="type_boolean.html">type_object()</a></code> <code><a href="type_boolean.html">type_from_schema()</a></code>
 
         </dt>
         <dd>Type specifications</dd>
@@ -264,12 +313,6 @@
         <dd>A chatbot provider</dd>
       </dl><dl><dt>
 
-          <code><a href="Chat.html">Chat</a></code>
-
-        </dt>
-        <dd>A chat</dd>
-      </dl><dl><dt>
-
           <code><a href="Turn.html">Turn()</a></code>
 
         </dt>
@@ -282,7 +325,7 @@
         <dd>Content types received from and sent to a chatbot</dd>
       </dl><dl><dt>
 
-          <code><a href="Type.html">TypeBasic()</a></code> <code><a href="Type.html">TypeEnum()</a></code> <code><a href="Type.html">TypeArray()</a></code> <code><a href="Type.html">TypeObject()</a></code>
+          <code><a href="Type.html">TypeBasic()</a></code> <code><a href="Type.html">TypeEnum()</a></code> <code><a href="Type.html">TypeArray()</a></code> <code><a href="Type.html">TypeJsonSchema()</a></code> <code><a href="Type.html">TypeObject()</a></code>
 
         </dt>
         <dd>Type definitions for function calling and structured data extraction.</dd>
@@ -300,9 +343,15 @@
       <dl><dt>
 
           <code><a href="contents_text.html">contents_text()</a></code> <code><a href="contents_text.html">contents_html()</a></code> <code><a href="contents_text.html">contents_markdown()</a></code>
-
+          <span class="badge lifecycle lifecycle-experimental">experimental</span>
         </dt>
         <dd>Format contents into a textual representation</dd>
+      </dl><dl><dt>
+
+          <code><a href="contents_record.html">contents_record()</a></code> <code><a href="contents_record.html">contents_replay()</a></code>
+
+        </dt>
+        <dd>Record and replay content</dd>
       </dl><dl><dt>
 
           <code><a href="params.html">params()</a></code>
@@ -334,11 +383,11 @@
    </div>
   <footer><div class="container">
   <div class="pkgdown-footer-left">
-  <p>Developed by <a href="https://hadley.nz" class="external-link">Hadley Wickham</a>, Joe Cheng, Aaron Jacobs, <a href="https://www.posit.co" class="external-link"><img src="https://www.tidyverse.org/posit-logo.svg" alt="Posit" height="16" width="62" style="margin-bottom: 3px;"></a>.</p>
+  <p>Developed by <a href="https://hadley.nz" class="external-link">Hadley Wickham</a>, Joe Cheng, Aaron Jacobs, <a href="https://garrickadenbuie.com" class="external-link">Garrick Aden-Buie</a>, <a href="http://schloerke.com" class="external-link">Barret Schloerke</a>, <a href="https://www.posit.co" class="external-link"><img src="https://www.tidyverse.org/posit-logo.svg" alt="Posit" height="16" width="62" style="margin-bottom: 3px;"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
   </div></footer></body></html>
